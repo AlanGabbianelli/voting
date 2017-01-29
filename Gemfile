@@ -21,6 +21,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem "pry-byebug" # Use pry to debug, writing "binding.pry"
   gem "pry-rails" # Use pry as rails console
+  gem 'rspec-rails' # Use RSpec for testing
 end
 
 group :development do
