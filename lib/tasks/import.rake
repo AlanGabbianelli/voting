@@ -1,17 +1,21 @@
+require 'partial_line'
+
 namespace :import do
   desc '-- Imports votes from a .txt file passed as argument'
   task :votes, [:file] => [:environment] do |_t, args|
     args.with_defaults(file: "#{Rails.root}/votes.txt")
     File.foreach(args[:file]) do |line|
-      needed_part = line.scrub('').split.take(5)
-      campaign = Campaign.find_or_create_by!(name: needed_part[2][9..-1])
-      choice = campaign.choices.find_or_create_by!(name: needed_part[4][7..-1])
-      choice.votes.find_or_create_by!(
-        time: Time.at(needed_part[1].to_i),
-        validity: needed_part[3][9..-1],
-        valid_vote: needed_part[3][9..-1] == 'during' ? true : false
-      )
-      print '.'
+      partial_line = PartialLine.new(line.scrub('').split.take(5))
+      if partial_line.well_formed?
+        campaign = Campaign.find_or_create_by!(name: partial_line.campaign_name)
+        choice = campaign.choices.find_or_create_by!(name: partial_line.choice_name)
+        choice.votes.find_or_create_by!(
+          time: partial_line.vote_time,
+          validity: partial_line.vote_validity,
+          valid_vote: partial_line.valid_vote?
+        )
+        print '.'
+      end
     end
     puts
     puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~'
