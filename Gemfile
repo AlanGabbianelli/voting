@@ -25,6 +25,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'better_errors' # To replace standard Rails error page with a better one
+  gem 'binding_of_caller' # To add a REPL to the better_errors error page
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
