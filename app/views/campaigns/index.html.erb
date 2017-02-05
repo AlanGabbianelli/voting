@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campaigns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaigns.each do |campaign| %>
+      <tr>
+        <td><%= link_to campaign.name, campaign %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
