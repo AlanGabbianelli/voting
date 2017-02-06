@@ -5,4 +5,26 @@
   <%= @campaign.name %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Valid Votes</th>
+      <th>Invalid Votes</th>
+      <th>Total Votes</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaign.choices.each do |choice| %>
+      <tr>
+        <td><%= choice.name %></td>
+        <td><%= choice.votes.select { |v| v.valid_vote? }.count %></td>
+        <td><%= choice.votes.reject { |v| v.valid_vote? }.count %></td>
+        <td><%= choice.votes.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Back', campaigns_path %>

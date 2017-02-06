@@ -6,6 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Valid Votes</th>
+      <th>Invalid Votes</th>
+      <th>Total Votes</th>
     </tr>
   </thead>
 
@@ -13,6 +16,9 @@
     <% @campaigns.each do |campaign| %>
       <tr>
         <td><%= link_to campaign.name, campaign %></td>
+        <td><%= campaign.votes.select { |v| v.valid_vote? }.count %></td>
+        <td><%= campaign.votes.reject { |v| v.valid_vote? }.count %></td>
+        <td><%= campaign.votes.count %></td>
       </tr>
     <% end %>
   </tbody>
