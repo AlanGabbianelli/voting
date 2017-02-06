@@ -34,6 +34,7 @@ group :development do
 end
 
 group :test do
+  gem 'capybara' # Use capybara for feature specs
   gem 'shoulda-matchers' # Use shoulda to test common Rails functionality
 end
 
