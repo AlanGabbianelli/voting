@@ -6,7 +6,7 @@ RSpec.feature 'User visits the voting portal', type: :feature do
     before(:each) { visit(campaigns_path) }
 
     scenario 'they see the title' do
-      within('h1') { expect(page).to have_content('Campaigns') }
+      within('h2') { expect(page).to have_content('Campaigns') }
     end
 
     scenario 'they see the headers' do
@@ -30,7 +30,7 @@ RSpec.feature 'User visits the voting portal', type: :feature do
     before(:each) { run_the_rake_task && visit(campaigns_path) }
 
     scenario 'they see the title' do
-      within('h1') { expect(page).to have_content('Campaigns') }
+      within('h2') { expect(page).to have_content('Campaigns') }
     end
 
     scenario 'they see the headers' do
@@ -53,7 +53,7 @@ RSpec.feature 'User visits the voting portal', type: :feature do
       before(:each) { click_link('ssss_uk_01B') }
 
       scenario 'they see the title' do
-        within('h1') { expect(page).to have_content('Campaign: ssss_uk_01B') }
+        within('h2') { expect(page).to have_content('Campaign: ssss_uk_01B') }
       end
 
       scenario 'they see the headers' do
