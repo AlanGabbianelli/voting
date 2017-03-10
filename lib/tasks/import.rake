@@ -14,13 +14,7 @@ namespace :import do
           validity: partial_line.vote_validity,
           valid_vote: partial_line.valid_vote?
         )
-        print '.'
       end
     end
-    puts
-    puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    puts 'File successfully imported!'
-    puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    puts
   end
 end
