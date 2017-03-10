@@ -80,4 +80,55 @@ RSpec.describe PartialLine do
       end
     end
   end
+
+  describe '#create_models!' do
+    context 'the Campaign is not present' do
+      it 'creates a new Campaign with right name' do
+        expect { partial_line.create_models! }.to change(Campaign, :count)
+        expect(Campaign.last.name).to eq(partial_line.campaign_name)
+      end
+    end
+
+    context 'Campaign with same name is already present' do
+      it 'does not create a new Campaign' do
+        partial_line.create_models!
+        expect { partial_line.create_models! }.to_not change(Campaign, :count)
+        expect(Campaign.last.name).to eq(partial_line.campaign_name)
+      end
+    end
+
+    context 'the Choice is not present' do
+      it 'creates a new Choice with right name' do
+        expect { partial_line.create_models! }.to change(Choice, :count)
+        expect(Choice.last.name).to eq(partial_line.choice_name)
+      end
+    end
+
+    context 'Choice with same name is already present' do
+      it 'does not create a new Choice' do
+        partial_line.create_models!
+        expect { partial_line.create_models! }.to_not change(Choice, :count)
+        expect(Choice.last.name).to eq(partial_line.choice_name)
+      end
+    end
+
+    context 'the Vote is not present' do
+      it 'creates a new Vote with right attributes' do
+        expect { partial_line.create_models! }.to change(Vote, :count)
+        expect(Vote.last.time).to eq(partial_line.vote_time)
+        expect(Vote.last.validity).to eq(partial_line.vote_validity)
+        expect(Vote.last.valid_vote).to eq(partial_line.valid_vote?)
+      end
+    end
+
+    context 'Vote with same attributes is already present' do
+      it 'creates a new Vote with right attributes' do
+        partial_line.create_models!
+        expect { partial_line.create_models! }.to change(Vote, :count)
+        expect(Vote.last.time).to eq(partial_line.vote_time)
+        expect(Vote.last.validity).to eq(partial_line.vote_validity)
+        expect(Vote.last.valid_vote).to eq(partial_line.valid_vote?)
+      end
+    end
+  end
 end

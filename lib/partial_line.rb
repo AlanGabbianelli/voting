@@ -34,6 +34,12 @@ class PartialLine
       choice_name.present?
   end
 
+  def create_models!
+    campaign = Campaign.find_or_create_by!(name: campaign_name)
+    choice = campaign.choices.find_or_create_by!(name: choice_name)
+    choice.votes.create! time: vote_time, validity: vote_validity, valid_vote: valid_vote?
+  end
+
   private
 
   def description
