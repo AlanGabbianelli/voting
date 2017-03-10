@@ -6,7 +6,8 @@ namespace :import do
     args.with_defaults(file: "#{Rails.root}/votes.txt")
     
     File.foreach(args[:file]) do |line|
-      partial_line = PartialLine.new(line.scrub('').split.take(5))
+      scrubbed_line = line.scrub('') # to remove unwanted characters
+      partial_line = PartialLine.new(scrubbed_line.split.take(5))
       partial_line.create_models! if partial_line.well_formed?
     end
   end
