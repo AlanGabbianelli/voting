@@ -122,11 +122,11 @@ In your terminal, type:
 $ git clone git@github.com:AlanGabbianelli/voting.git
 $ cd voting
 $ bundle install
-$ rake db:create
-$ rake db:migrate
+$ rails db:create
+$ rails db:migrate
 ```
 
-Run the tests to see that everithing is fine:
+Run the tests to see that everything is fine:
 ```
 $ rspec
 ```

@@ -10,34 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205181119) do
+ActiveRecord::Schema.define(version: 2017_02_05_181119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "campaigns", force: :cascade do |t|
-    t.string   "name",       null: false
+  create_table "campaigns", id: :serial, force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "choices", force: :cascade do |t|
-    t.integer  "campaign_id"
-    t.string   "name",        null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["campaign_id", "name"], name: "index_choices_on_campaign_id_and_name", unique: true, using: :btree
-    t.index ["campaign_id"], name: "index_choices_on_campaign_id", using: :btree
-  end
-
-  create_table "votes", force: :cascade do |t|
-    t.integer  "choice_id"
-    t.datetime "time",       null: false
-    t.string   "validity"
-    t.boolean  "valid_vote", null: false
+  create_table "choices", id: :serial, force: :cascade do |t|
+    t.integer "campaign_id"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["choice_id"], name: "index_votes_on_choice_id", using: :btree
+    t.index ["campaign_id", "name"], name: "index_choices_on_campaign_id_and_name", unique: true
+    t.index ["campaign_id"], name: "index_choices_on_campaign_id"
+  end
+
+  create_table "votes", id: :serial, force: :cascade do |t|
+    t.integer "choice_id"
+    t.datetime "time", null: false
+    t.string "validity"
+    t.boolean "valid_vote", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["choice_id"], name: "index_votes_on_choice_id"
   end
 
   add_foreign_key "choices", "campaigns"
