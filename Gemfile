@@ -36,7 +36,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '~> 3.1.0' # Use capybara for feature specs
+  gem 'capybara', '~> 3.16.0' # Use capybara for feature specs
   gem 'shoulda-matchers', '~> 3.1.2' # Use shoulda to test common Rails functionality
 end
 
