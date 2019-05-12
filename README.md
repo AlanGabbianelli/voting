@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/alphagov/tech-docs-monitor.svg?branch=master)](https://travis-ci.com/alphagov/tech-docs-monitor)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f8572e8b4a05f7374f28/maintainability)](https://codeclimate.com/github/AlanGabbianelli/voting/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f8572e8b4a05f7374f28/test_coverage)](https://codeclimate.com/github/AlanGabbianelli/voting/test_coverage)
+
 ## Task
 
 Create a rails application to show the results for TV SMS voting campaigns,
