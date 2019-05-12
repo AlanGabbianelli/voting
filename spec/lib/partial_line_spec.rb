@@ -17,7 +17,7 @@ RSpec.describe PartialLine do
   end
 
   describe '#vote_time' do
-    it { expect(partial_line.vote_time).to eq(Time.at(1168041980)) }
+    it { expect(partial_line.vote_time).to eq(Time.at(1_168_041_980)) }
   end
 
   describe '#vote_validity' do
