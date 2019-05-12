@@ -23,7 +23,7 @@ class PartialLine
   end
 
   def valid_vote?
-    vote_validity == 'during' ? true : false
+    vote_validity == 'during'
   end
 
   def well_formed?

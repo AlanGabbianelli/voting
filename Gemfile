@@ -16,7 +16,7 @@ gem 'puma', '~> 3.11.4'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0.7'
 gem 'turbolinks', '~> 5.1.1'
-gem 'tzinfo-data', '~> 1.2.5', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier', '~> 4.1.10'
 
 group :development, :test do
@@ -29,10 +29,10 @@ group :development do
   gem 'better_errors', '~> 2.4.0' # To replace standard Rails error page with a better one
   gem 'binding_of_caller', '~> 0.8.0' # To add a REPL to the better_errors error page
   gem 'listen', '~> 3.1.5'
+  gem 'rails-erd', '~> 1.5.2' # To generate model diagrams using Graphviz, a visualisation library
   gem 'spring', '~> 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0.1'
   gem 'web-console', '~> 3.6.2'
-  gem 'rails-erd', '~> 1.5.2' # To generate model diagrams using Graphviz, a visualisation library
 end
 
 group :test do
