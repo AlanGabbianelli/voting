@@ -1,0 +1,9 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/{rails,rake,spring,yarn}'
+    - 'spec/{rails_helper.rb,spec_helper.rb}'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
