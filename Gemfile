@@ -15,7 +15,7 @@ gem 'pg', '~> 1.0.0'
 gem 'puma', '~> 3.11.4'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0.7'
-gem 'turbolinks', '~> 5.1.1'
+gem 'turbolinks', '~> 5.2.0'
 gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier', '~> 4.1.10'
 
