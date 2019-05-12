@@ -3,7 +3,7 @@ env:
     - CC_TEST_REPORTER_ID=ce1e5c9e819c60ed1f80d7eedee942474cb168e3131bcdf36816ff086fc385b4
 language: ruby
 rvm:
-  - 2.5.1
+  - 2.6.3
 services:
   - postgresql
 notifications:
