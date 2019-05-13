@@ -20,7 +20,7 @@ gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier', '~> 4.1.10'
 
 group :development, :test do
-  gem 'pry-byebug', '~> 3.6.0' # Use pry to debug, writing "binding.pry"
+  gem 'pry-byebug', '~> 3.7.0' # Use pry to debug, writing "binding.pry"
   gem 'pry-rails', '~> 0.3.6' # Use pry as rails console
   gem 'rspec-rails', '~> 3.7.2' # Use RSpec for testing
 end
