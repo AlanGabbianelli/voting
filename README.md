@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/alphagov/tech-docs-monitor.svg?branch=master)](https://travis-ci.com/alphagov/tech-docs-monitor)
+[![Known Vulnerabilities](https://snyk.io/test/github/AlanGabbianelli/voting/badge.svg)](https://snyk.io/test/github/AlanGabbianelli/voting)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f8572e8b4a05f7374f28/maintainability)](https://codeclimate.com/github/AlanGabbianelli/voting/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f8572e8b4a05f7374f28/test_coverage)](https://codeclimate.com/github/AlanGabbianelli/voting/test_coverage)
 
