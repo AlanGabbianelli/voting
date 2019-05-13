@@ -32,7 +32,7 @@ group :development do
   gem 'rails-erd', '~> 1.5.2' # To generate model diagrams using Graphviz, a visualisation library
   gem 'spring', '~> 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0.1'
-  gem 'web-console', '~> 3.6.2'
+  gem 'web-console', '~> 3.7.0'
 end
 
 group :test do
