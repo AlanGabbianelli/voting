@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'bootsnap', '~> 1.3.0', require: false
+gem 'bootsnap', '~> 1.4.4', require: false
 gem 'coffee-rails', '~> 4.2.2'
 gem 'jbuilder', '~> 2.8.0'
 gem 'jquery-rails', '~> 4.3.3'
