@@ -41,4 +41,4 @@ group :test do
   gem 'simplecov', require: false # To check code coverage
 end
 
-gem 'rubocop', '~> 0.55.0' # Ruby static code analyzer
+gem 'rubocop', '~> 0.75.1' # Ruby static code analyzer
