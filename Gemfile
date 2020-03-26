@@ -38,7 +38,7 @@ end
 group :test do
   gem 'capybara', '~> 3.19.1' # Use capybara for feature specs
   gem 'shoulda-matchers', '~> 4.3.0' # Use shoulda to test common Rails functionality
-  gem 'simplecov', require: false # To check code coverage
+  gem 'simplecov', '>= 0.16.1', require: false # To check code coverage
 end
 
 gem 'rubocop', '~> 0.81.0' # Ruby static code analyzer
