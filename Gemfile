@@ -11,7 +11,7 @@ gem 'bootsnap', '~> 1.4.6', require: false
 gem 'coffee-rails', '~> 5.0.0'
 gem 'jbuilder', '~> 2.10.0'
 gem 'jquery-rails', '~> 4.3.3'
-gem 'pg', '~> 1.0.0'
+gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 3.12.4'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0.7'
