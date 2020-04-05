@@ -46,7 +46,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     ast (2.4.0)
-    better_errors (2.4.0)
+    better_errors (2.6.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
@@ -249,7 +249,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors (~> 2.4.0)
+  better_errors (~> 2.6.0)
   binding_of_caller (~> 0.8.0)
   bootsnap (~> 1.4.6)
   capybara (~> 3.19.1)
