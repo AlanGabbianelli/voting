@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bootsnap', '~> 1.3.0', require: false
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 5.0.0'
 gem 'jbuilder', '~> 2.8.0'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'pg', '~> 1.0.0'
