@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.10.0'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 3.12.4'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'sass-rails', '~> 5.0.7'
 gem 'turbolinks', '~> 5.2.0'
 gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
@@ -38,7 +38,7 @@ end
 group :test do
   gem 'capybara', '~> 3.19.1' # Use capybara for feature specs
   gem 'shoulda-matchers', '~> 4.3.0' # Use shoulda to test common Rails functionality
-  gem 'simplecov', require: false # To check code coverage
+  gem 'simplecov', '>= 0.16.1', require: false # To check code coverage
 end
 
 gem 'rubocop', '~> 0.81.0' # Ruby static code analyzer
