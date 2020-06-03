@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.10.0'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 4.3.3'
-gem 'rails', '~> 6.0.2'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'sass-rails', '~> 6.0.0'
 gem 'turbolinks', '~> 5.2.0'
 gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
