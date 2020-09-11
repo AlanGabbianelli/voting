@@ -10,10 +10,10 @@ end
 gem 'bootsnap', '~> 1.4.6', require: false
 gem 'coffee-rails', '~> 5.0.0'
 gem 'jbuilder', '~> 2.10.0'
-gem 'jquery-rails', '~> 4.3.3'
+gem 'jquery-rails', '~> 4.3.5'
 gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 4.3.3'
-gem 'rails', '~> 6.0.2'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'sass-rails', '~> 6.0.0'
 gem 'turbolinks', '~> 5.2.0'
 gem 'tzinfo-data', '~> 1.2.5', platforms: %i[mingw mswin x64_mingw jruby]
