@@ -26,7 +26,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 2.6.0' # To replace standard Rails error page with a better one
+  gem 'better_errors', '~> 2.8.0' # To replace standard Rails error page with a better one
   gem 'binding_of_caller', '~> 0.8.0' # To add a REPL to the better_errors error page
   gem 'listen', '~> 3.2.1'
   gem 'rails-erd', '~> 1.6.0' # To generate model diagrams using Graphviz, a visualisation library
